@@ -17,6 +17,13 @@
 		D7E5469223A9266700EE36D4 /* NetworkEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E5468E23A9266700EE36D4 /* NetworkEndPoint.swift */; };
 		D7E5469423A93F8F00EE36D4 /* QuizApiEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E5469323A93F8F00EE36D4 /* QuizApiEndPoint.swift */; };
 		D7E5469823A9420700EE36D4 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E5469723A9420700EE36D4 /* Quiz.swift */; };
+		D7E546A123A9498000EE36D4 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7E5469E23A9498000EE36D4 /* SF-Pro-Display-Regular.otf */; };
+		D7E546A223A9498000EE36D4 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7E5469F23A9498000EE36D4 /* SF-Pro-Display-Bold.otf */; };
+		D7E546A323A9498000EE36D4 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7E546A023A9498000EE36D4 /* SF-Pro-Display-Semibold.otf */; };
+		D7E546A523A94AED00EE36D4 /* UIFont+ArcTouchChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546A423A94AED00EE36D4 /* UIFont+ArcTouchChallenge.swift */; };
+		D7E546A723A94C7900EE36D4 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546A623A94C7900EE36D4 /* ViewCode.swift */; };
+		D7E546A923A94CAE00EE36D4 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546A823A94CAE00EE36D4 /* Identifiable.swift */; };
+		D7E546AB23A94D0E00EE36D4 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546AA23A94D0E00EE36D4 /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,13 @@
 		D7E5468E23A9266700EE36D4 /* NetworkEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEndPoint.swift; sourceTree = "<group>"; };
 		D7E5469323A93F8F00EE36D4 /* QuizApiEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizApiEndPoint.swift; sourceTree = "<group>"; };
 		D7E5469723A9420700EE36D4 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		D7E5469E23A9498000EE36D4 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		D7E5469F23A9498000EE36D4 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		D7E546A023A9498000EE36D4 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		D7E546A423A94AED00EE36D4 /* UIFont+ArcTouchChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+ArcTouchChallenge.swift"; sourceTree = "<group>"; };
+		D7E546A623A94C7900EE36D4 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
+		D7E546A823A94CAE00EE36D4 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		D7E546AA23A94D0E00EE36D4 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +99,12 @@
 		D7E5466423A91CD500EE36D4 /* ArcTouchChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				D7E5469923A9481600EE36D4 /* Utils */,
 				D7E5469623A941C400EE36D4 /* Model */,
 				D7E5468823A9266700EE36D4 /* Service */,
+				D7E5469C23A9486F00EE36D4 /* Resources */,
 				D7E5466523A91CD500EE36D4 /* AppDelegate.swift */,
 				D7E5466923A91CD500EE36D4 /* ViewController.swift */,
-				D7E5466E23A91CD500EE36D4 /* Assets.xcassets */,
-				D7E5467023A91CD500EE36D4 /* LaunchScreen.storyboard */,
 				D7E5467323A91CD500EE36D4 /* Info.plist */,
 			);
 			path = ArcTouchChallenge;
@@ -138,6 +152,53 @@
 				D7E5469723A9420700EE36D4 /* Quiz.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D7E5469923A9481600EE36D4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D7E5469B23A9482A00EE36D4 /* Extensions */,
+				D7E5469A23A9481E00EE36D4 /* Protocols */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D7E5469A23A9481E00EE36D4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D7E546A623A94C7900EE36D4 /* ViewCode.swift */,
+				D7E546A823A94CAE00EE36D4 /* Identifiable.swift */,
+				D7E546AA23A94D0E00EE36D4 /* Repository.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D7E5469B23A9482A00EE36D4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D7E546A423A94AED00EE36D4 /* UIFont+ArcTouchChallenge.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D7E5469C23A9486F00EE36D4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D7E5469D23A9498000EE36D4 /* Fonts */,
+				D7E5466E23A91CD500EE36D4 /* Assets.xcassets */,
+				D7E5467023A91CD500EE36D4 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D7E5469D23A9498000EE36D4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D7E5469E23A9498000EE36D4 /* SF-Pro-Display-Regular.otf */,
+				D7E5469F23A9498000EE36D4 /* SF-Pro-Display-Bold.otf */,
+				D7E546A023A9498000EE36D4 /* SF-Pro-Display-Semibold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +283,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7E5467223A91CD500EE36D4 /* LaunchScreen.storyboard in Resources */,
+				D7E546A123A9498000EE36D4 /* SF-Pro-Display-Regular.otf in Resources */,
+				D7E546A323A9498000EE36D4 /* SF-Pro-Display-Semibold.otf in Resources */,
+				D7E546A223A9498000EE36D4 /* SF-Pro-Display-Bold.otf in Resources */,
 				D7E5466F23A91CD500EE36D4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,9 +306,13 @@
 			files = (
 				D7E5469423A93F8F00EE36D4 /* QuizApiEndPoint.swift in Sources */,
 				D7E5469023A9266700EE36D4 /* NetworkProtocol.swift in Sources */,
+				D7E546A723A94C7900EE36D4 /* ViewCode.swift in Sources */,
+				D7E546A923A94CAE00EE36D4 /* Identifiable.swift in Sources */,
 				D7E5469823A9420700EE36D4 /* Quiz.swift in Sources */,
+				D7E546AB23A94D0E00EE36D4 /* Repository.swift in Sources */,
 				D7E5466A23A91CD500EE36D4 /* ViewController.swift in Sources */,
 				D7E5468F23A9266700EE36D4 /* Request.swift in Sources */,
+				D7E546A523A94AED00EE36D4 /* UIFont+ArcTouchChallenge.swift in Sources */,
 				D7E5469223A9266700EE36D4 /* NetworkEndPoint.swift in Sources */,
 				D7E5466623A91CD500EE36D4 /* AppDelegate.swift in Sources */,
 			);
