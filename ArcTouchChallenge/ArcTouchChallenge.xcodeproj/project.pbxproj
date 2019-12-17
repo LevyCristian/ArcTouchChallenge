@@ -24,6 +24,8 @@
 		D7E546A723A94C7900EE36D4 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546A623A94C7900EE36D4 /* ViewCode.swift */; };
 		D7E546A923A94CAE00EE36D4 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546A823A94CAE00EE36D4 /* Identifiable.swift */; };
 		D7E546AB23A94D0E00EE36D4 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546AA23A94D0E00EE36D4 /* Repository.swift */; };
+		D7E546AD23A9529E00EE36D4 /* String+Captalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546AC23A9529E00EE36D4 /* String+Captalization.swift */; };
+		D7E546AF23A952CE00EE36D4 /* UIColor+ArcTouchChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546AE23A952CE00EE36D4 /* UIColor+ArcTouchChallenge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		D7E546A623A94C7900EE36D4 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		D7E546A823A94CAE00EE36D4 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		D7E546AA23A94D0E00EE36D4 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		D7E546AC23A9529E00EE36D4 /* String+Captalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Captalization.swift"; sourceTree = "<group>"; };
+		D7E546AE23A952CE00EE36D4 /* UIColor+ArcTouchChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ArcTouchChallenge.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				D7E5469923A9481600EE36D4 /* Utils */,
 				D7E5469623A941C400EE36D4 /* Model */,
 				D7E5468823A9266700EE36D4 /* Service */,
+				D7E546B223A9544700EE36D4 /* ViewModel */,
+				D7E546B023A9543700EE36D4 /* View */,
 				D7E5469C23A9486F00EE36D4 /* Resources */,
 				D7E5466523A91CD500EE36D4 /* AppDelegate.swift */,
 				D7E5466923A91CD500EE36D4 /* ViewController.swift */,
@@ -177,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				D7E546A423A94AED00EE36D4 /* UIFont+ArcTouchChallenge.swift */,
+				D7E546AC23A9529E00EE36D4 /* String+Captalization.swift */,
+				D7E546AE23A952CE00EE36D4 /* UIColor+ArcTouchChallenge.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -199,6 +207,28 @@
 				D7E546A023A9498000EE36D4 /* SF-Pro-Display-Semibold.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D7E546B023A9543700EE36D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7E546B323A9549200EE36D4 /* QuizView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7E546B223A9544700EE36D4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D7E546B323A9549200EE36D4 /* QuizView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = QuizView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,8 +342,10 @@
 				D7E546AB23A94D0E00EE36D4 /* Repository.swift in Sources */,
 				D7E5466A23A91CD500EE36D4 /* ViewController.swift in Sources */,
 				D7E5468F23A9266700EE36D4 /* Request.swift in Sources */,
+				D7E546AF23A952CE00EE36D4 /* UIColor+ArcTouchChallenge.swift in Sources */,
 				D7E546A523A94AED00EE36D4 /* UIFont+ArcTouchChallenge.swift in Sources */,
 				D7E5469223A9266700EE36D4 /* NetworkEndPoint.swift in Sources */,
+				D7E546AD23A9529E00EE36D4 /* String+Captalization.swift in Sources */,
 				D7E5466623A91CD500EE36D4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
