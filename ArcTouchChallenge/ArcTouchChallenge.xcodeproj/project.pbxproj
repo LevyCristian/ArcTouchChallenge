@@ -12,6 +12,11 @@
 		D7E5466F23A91CD500EE36D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7E5466E23A91CD500EE36D4 /* Assets.xcassets */; };
 		D7E5467223A91CD500EE36D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7E5467023A91CD500EE36D4 /* LaunchScreen.storyboard */; };
 		D7E5467D23A91CD500EE36D4 /* ArcTouchChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E5467C23A91CD500EE36D4 /* ArcTouchChallengeTests.swift */; };
+		D7E5468F23A9266700EE36D4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E5468A23A9266700EE36D4 /* Request.swift */; };
+		D7E5469023A9266700EE36D4 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E5468B23A9266700EE36D4 /* NetworkProtocol.swift */; };
+		D7E5469223A9266700EE36D4 /* NetworkEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E5468E23A9266700EE36D4 /* NetworkEndPoint.swift */; };
+		D7E5469423A93F8F00EE36D4 /* QuizApiEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E5469323A93F8F00EE36D4 /* QuizApiEndPoint.swift */; };
+		D7E5469823A9420700EE36D4 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E5469723A9420700EE36D4 /* Quiz.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,11 @@
 		D7E5467823A91CD500EE36D4 /* ArcTouchChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArcTouchChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E5467C23A91CD500EE36D4 /* ArcTouchChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcTouchChallengeTests.swift; sourceTree = "<group>"; };
 		D7E5467E23A91CD500EE36D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7E5468A23A9266700EE36D4 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		D7E5468B23A9266700EE36D4 /* NetworkProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		D7E5468E23A9266700EE36D4 /* NetworkEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEndPoint.swift; sourceTree = "<group>"; };
+		D7E5469323A93F8F00EE36D4 /* QuizApiEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizApiEndPoint.swift; sourceTree = "<group>"; };
+		D7E5469723A9420700EE36D4 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +85,8 @@
 		D7E5466423A91CD500EE36D4 /* ArcTouchChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				D7E5469623A941C400EE36D4 /* Model */,
+				D7E5468823A9266700EE36D4 /* Service */,
 				D7E5466523A91CD500EE36D4 /* AppDelegate.swift */,
 				D7E5466923A91CD500EE36D4 /* ViewController.swift */,
 				D7E5466E23A91CD500EE36D4 /* Assets.xcassets */,
@@ -91,6 +103,41 @@
 				D7E5467E23A91CD500EE36D4 /* Info.plist */,
 			);
 			path = ArcTouchChallengeTests;
+			sourceTree = "<group>";
+		};
+		D7E5468823A9266700EE36D4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D7E5468923A9266700EE36D4 /* EndPoint */,
+				D7E5468C23A9266700EE36D4 /* Conenction */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D7E5468923A9266700EE36D4 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				D7E5468A23A9266700EE36D4 /* Request.swift */,
+				D7E5468B23A9266700EE36D4 /* NetworkProtocol.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		D7E5468C23A9266700EE36D4 /* Conenction */ = {
+			isa = PBXGroup;
+			children = (
+				D7E5468E23A9266700EE36D4 /* NetworkEndPoint.swift */,
+				D7E5469323A93F8F00EE36D4 /* QuizApiEndPoint.swift */,
+			);
+			path = Conenction;
+			sourceTree = "<group>";
+		};
+		D7E5469623A941C400EE36D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7E5469723A9420700EE36D4 /* Quiz.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +240,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E5469423A93F8F00EE36D4 /* QuizApiEndPoint.swift in Sources */,
+				D7E5469023A9266700EE36D4 /* NetworkProtocol.swift in Sources */,
+				D7E5469823A9420700EE36D4 /* Quiz.swift in Sources */,
 				D7E5466A23A91CD500EE36D4 /* ViewController.swift in Sources */,
+				D7E5468F23A9266700EE36D4 /* Request.swift in Sources */,
+				D7E5469223A9266700EE36D4 /* NetworkEndPoint.swift in Sources */,
 				D7E5466623A91CD500EE36D4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
