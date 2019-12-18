@@ -35,6 +35,7 @@
 		D7E546CD23AA6E5400EE36D4 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546CC23AA6E5400EE36D4 /* QuizViewModel.swift */; };
 		D7E546CF23AA753B00EE36D4 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546CE23AA753B00EE36D4 /* UIViewController+Alerts.swift */; };
 		D7E546D123AA991D00EE36D4 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546D023AA991D00EE36D4 /* TimerManager.swift */; };
+		D7E546D623AABBD200EE36D4 /* KeywordCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546D523AABBD200EE36D4 /* KeywordCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		D7E546CC23AA6E5400EE36D4 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		D7E546CE23AA753B00EE36D4 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		D7E546D023AA991D00EE36D4 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		D7E546D523AABBD200EE36D4 /* KeywordCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				D7E546CC23AA6E5400EE36D4 /* QuizViewModel.swift */,
+				D7E546D523AABBD200EE36D4 /* KeywordCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				D7E546C523A97EA100EE36D4 /* FooterView.swift in Sources */,
 				D7E546C723AA4D8F00EE36D4 /* KeyBoardManager.swift in Sources */,
 				D7E546A723A94C7900EE36D4 /* ViewCode.swift in Sources */,
+				D7E546D623AABBD200EE36D4 /* KeywordCellViewModel.swift in Sources */,
 				D7E546A923A94CAE00EE36D4 /* Identifiable.swift in Sources */,
 				D7E546BB23A95B9200EE36D4 /* QuizTextField.swift in Sources */,
 				D7E546BD23A9647D00EE36D4 /* LoadingView.swift in Sources */,
