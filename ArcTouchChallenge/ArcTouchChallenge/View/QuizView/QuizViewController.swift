@@ -10,8 +10,8 @@ import UIKit
 
 class QuizViewController: UIViewController {
     
-    lazy var quizView: LoadingView = {
-        let view = LoadingView()
+    lazy var quizView: QuizView = {
+        let view = QuizView()
         
         return view
     }()
@@ -19,6 +19,7 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = quizView
+        quizView.isLoading = false
     }
 
 }
