@@ -52,12 +52,20 @@ class FooterView: UIView {
 
 extension FooterView: ViewCode {
     func buildViewHierarchy() {
+        addSubview(separatorLineView)
         addSubview(counterLabel)
         addSubview(timerLabel)
         addSubview(quizButton)
     }
     
     func setupConstraints() {
+        NSLayoutConstraint.activate([
+            separatorLineView.topAnchor.constraint(equalTo: topAnchor),
+            separatorLineView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            separatorLineView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            separatorLineView.heightAnchor.constraint(equalToConstant: 1)
+        ])
+        
         NSLayoutConstraint.activate([
             counterLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16),
             counterLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16)
