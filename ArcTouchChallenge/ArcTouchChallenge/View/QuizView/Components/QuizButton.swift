@@ -11,7 +11,7 @@ import UIKit
 class QuizButton: UIButton {
     
     var title: String? {
-        didSet(newValue) {
+        willSet(newValue) {
             setTitle(newValue, for: .normal)
         }
     }
