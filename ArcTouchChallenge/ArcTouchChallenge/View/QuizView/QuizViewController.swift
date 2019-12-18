@@ -50,6 +50,12 @@ class QuizViewController: UIViewController {
             self?.quizView.footerView.quizButton.title = self?.viewModel.buttonTitle
         }
         
+        viewModel.updatedUIWitCurrenthCounterValue = { [weak self] counter in
+            self?.quizView.quizTextField.text = ""
+            self?.quizView.footerView.counterLabel.text = counter
+            self?.quizView.keywordsTableView.reloadData()
+        }
+        
         viewModel.didFinishQuiz = { [weak self] isWinner in
             
             if isWinner {

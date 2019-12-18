@@ -12,23 +12,35 @@ class QuizViewModel {
     
     // MARK: - Typealias
     typealias BooleanClosure = ((Bool) -> Void)
-    typealias StringClosure = ((String) -> Void)
+    typealias StringClosure = ((String?) -> Void)
     typealias ErrorClousure = ((Errors) -> Void)
-    typealias CurrentTimeClosure = ((String) -> Void)
     
     // MARK: - Binding closures
     var isLoading: BooleanClosure?
     var errorLoadingData: ErrorClousure?
     var updateTitleWithQuestion: StringClosure?
-    var updateUIWithCurrentTimer: CurrentTimeClosure?
+    var updateUIWithCurrentTimer: StringClosure?
+    var updatedUIWitCurrenthCounterValue: StringClosure?
     var didFinishQuiz: BooleanClosure?
     
     // MARK: - Variables
+    private var quizResponse: Quiz?
     private var numberOfHits: Int = 0
-    private var numberOfAnswers: Int = 0
     private var cellViewModels: [KeywordCellViewModel] = []
-    
     private var quizTimer: TimerManager = TimerManager()
+
+    private var numberOfAnswers: Int  {
+        return quizResponse?.answer.count ?? 0
+    }
+    
+    private var hits: [String] {
+        didSet(newValue) {
+            let hitsReverseOrder = hits.reversed()
+            cellViewModels = hitsReverseOrder.map { (keyword) in
+                KeywordCellViewModel(keyword: keyword)
+            }
+        }
+    }
     
     var buttonTitle: String? {
         return quizTimer.timer == nil ? "Start" : "Reset"
@@ -38,10 +50,11 @@ class QuizViewModel {
         return cellViewModels.count
     }
     
-//    var countLabel: String? {
-//        return quizTimer.timer == nil ? "Start" : "Reset"
-//    } fazer a label de hits
-//
+    var countLabel: String? {
+        return String(format:"%02i/%02i", numberOfHits, numberOfAnswers)
+
+    }
+
     private var question: String  {
         willSet(newValue) {
             updateTitleWithQuestion?(newValue)
@@ -50,6 +63,7 @@ class QuizViewModel {
     
     init() {
         self.question = ""
+        self.hits = []
         setupTimer()
     }
     
@@ -60,7 +74,9 @@ class QuizViewModel {
             case .success(let quiz):
                 self?.isLoading?(false)
                 self?.question = quiz.question
+                self?.quizResponse = quiz
                 self?.updateUIWithCurrentTimer?("5:00")
+                self?.updatedUIWitCurrenthCounterValue?(self?.countLabel)
                 
             case .failure(let erro):
                 self?.isLoading?(false)
@@ -91,11 +107,24 @@ class QuizViewModel {
     
     @objc func textFieldDidChange(_ textField : UITextField) {
         if let text = textField.text, quizTimer.timer != nil {
-            
+            checkHit(hit: text)
         }
     }
     
     func getCellViewModel(for indexPath: IndexPath) -> KeywordCellViewModel? {
         return cellViewModels[indexPath.row]
+    }
+    
+    private func checkHit(hit: String) {
+        let hit = hit.lowercased()
+        if let awnsers = quizResponse?.answer, awnsers.contains(hit), !hits.contains(hit) {
+            self.hits.append(hit)
+            self.numberOfHits+=1
+            self.updatedUIWitCurrenthCounterValue?(self.countLabel)
+
+            if numberOfHits == numberOfAnswers {
+                didFinishQuiz?(true)
+            }
+        }
     }
 }
