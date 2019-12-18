@@ -12,16 +12,16 @@ class FooterView: UIView {
 
     lazy var counterLabel: UILabel = {
         let label = UILabel()
+        label.text = "0/50"
         label.font = UIFont.applyFont(ofSize: 34, weight: .bold)
-        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     lazy var timerLabel: UILabel = {
         let label = UILabel()
+        label.text = "5:00"
         label.font = UIFont.applyFont(ofSize: 34, weight: .bold)
-        label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -34,7 +34,7 @@ class FooterView: UIView {
     
     lazy var separatorLineView: UIView = {
         let line = UIView()
-        line.backgroundColor = .gray
+        line.backgroundColor = UIColor.gray.withAlphaComponent(0.3)
         line.translatesAutoresizingMaskIntoConstraints = false
         return line
     }()
@@ -67,17 +67,18 @@ extension FooterView: ViewCode {
         ])
         
         NSLayoutConstraint.activate([
-            counterLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16),
+            counterLabel.topAnchor.constraint(equalTo: separatorLineView.bottomAnchor, constant: 16),
             counterLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16)
         ])
         
         NSLayoutConstraint.activate([
-            timerLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16),
+            timerLabel.topAnchor.constraint(equalTo: separatorLineView.bottomAnchor, constant: 16),
             timerLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
         ])
         
         NSLayoutConstraint.activate([
             quizButton.topAnchor.constraint(equalTo: counterLabel.bottomAnchor, constant: 16),
+            quizButton.topAnchor.constraint(equalTo: timerLabel.bottomAnchor, constant: 16),
             quizButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             quizButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             quizButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)

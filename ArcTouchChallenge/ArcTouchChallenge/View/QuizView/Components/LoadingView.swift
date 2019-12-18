@@ -18,7 +18,7 @@ class LoadingView: UIView {
         return view
     }()
     
-    private lazy var activyIndicator: UIActivityIndicatorView = {
+    lazy var activyIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView()
         indicator.style = .whiteLarge
         indicator.color = .white
