@@ -34,8 +34,8 @@
 		D7E546C723AA4D8F00EE36D4 /* KeyBoardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546C623AA4D8F00EE36D4 /* KeyBoardManager.swift */; };
 		D7E546CD23AA6E5400EE36D4 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546CC23AA6E5400EE36D4 /* QuizViewModel.swift */; };
 		D7E546CF23AA753B00EE36D4 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546CE23AA753B00EE36D4 /* UIViewController+Alerts.swift */; };
-		D7E546D123AA991D00EE36D4 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546D023AA991D00EE36D4 /* TimerManager.swift */; };
 		D7E546D623AABBD200EE36D4 /* KeywordCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546D523AABBD200EE36D4 /* KeywordCellViewModel.swift */; };
+		D7E546D823AACB3300EE36D4 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546D723AACB3300EE36D4 /* TimerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,8 +80,8 @@
 		D7E546C623AA4D8F00EE36D4 /* KeyBoardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeyBoardManager.swift; path = ../../../../../Documents/KeyBoardManager.swift; sourceTree = "<group>"; };
 		D7E546CC23AA6E5400EE36D4 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		D7E546CE23AA753B00EE36D4 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
-		D7E546D023AA991D00EE36D4 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		D7E546D523AABBD200EE36D4 /* KeywordCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordCellViewModel.swift; sourceTree = "<group>"; };
+		D7E546D723AACB3300EE36D4 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +185,7 @@
 				D7E5469B23A9482A00EE36D4 /* Extensions */,
 				D7E5469A23A9481E00EE36D4 /* Protocols */,
 				D7E546C623AA4D8F00EE36D4 /* KeyBoardManager.swift */,
+				D7E546D723AACB3300EE36D4 /* TimerManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -253,7 +254,6 @@
 				D7E546B423A9553500EE36D4 /* Components */,
 				D7E546BE23A964A300EE36D4 /* QuizViewController.swift */,
 				D7E546C023A964B800EE36D4 /* QuizView.swift */,
-				D7E546D023AA991D00EE36D4 /* TimerManager.swift */,
 			);
 			path = QuizView;
 			sourceTree = "<group>";
@@ -373,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7E5469423A93F8F00EE36D4 /* QuizApiEndPoint.swift in Sources */,
+				D7E546D823AACB3300EE36D4 /* TimerManager.swift in Sources */,
 				D7E546BF23A964A300EE36D4 /* QuizViewController.swift in Sources */,
 				D7E5469023A9266700EE36D4 /* NetworkProtocol.swift in Sources */,
 				D7E546CD23AA6E5400EE36D4 /* QuizViewModel.swift in Sources */,
@@ -386,7 +387,6 @@
 				D7E5469823A9420700EE36D4 /* Quiz.swift in Sources */,
 				D7E546AB23A94D0E00EE36D4 /* Repository.swift in Sources */,
 				D7E5468F23A9266700EE36D4 /* Request.swift in Sources */,
-				D7E546D123AA991D00EE36D4 /* TimerManager.swift in Sources */,
 				D7E546C123A964B800EE36D4 /* QuizView.swift in Sources */,
 				D7E546AF23A952CE00EE36D4 /* UIColor+ArcTouchChallenge.swift in Sources */,
 				D7E546A523A94AED00EE36D4 /* UIFont+ArcTouchChallenge.swift in Sources */,
