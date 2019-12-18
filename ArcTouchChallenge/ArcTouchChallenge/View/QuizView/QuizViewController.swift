@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  QuizViewController.swift
 //  ArcTouchChallenge
 //
 //  Created by Levy Cristian on 17/12/19.
@@ -8,13 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class QuizViewController: UIViewController {
+    
+    lazy var quizView: LoadingView = {
+        let view = LoadingView()
+        
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view = quizView
     }
 
-
 }
-

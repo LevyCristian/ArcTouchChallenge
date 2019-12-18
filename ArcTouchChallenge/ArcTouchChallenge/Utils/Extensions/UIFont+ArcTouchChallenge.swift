@@ -17,7 +17,7 @@ enum AppFontVariantions: String {
 }
 
 extension UIFont {
-    static func appFont(with size : CGFloat, and variation : AppFontVariantions ) -> UIFont? {
+    static func applyFont(ofSize size : CGFloat, weight variation : AppFontVariantions ) -> UIFont? {
         return UIFont(name: "SFProDisplay\(variation.rawValue)", size: size)
     }
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D7E5466623A91CD500EE36D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E5466523A91CD500EE36D4 /* AppDelegate.swift */; };
-		D7E5466A23A91CD500EE36D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E5466923A91CD500EE36D4 /* ViewController.swift */; };
 		D7E5466F23A91CD500EE36D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7E5466E23A91CD500EE36D4 /* Assets.xcassets */; };
 		D7E5467223A91CD500EE36D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7E5467023A91CD500EE36D4 /* LaunchScreen.storyboard */; };
 		D7E5467D23A91CD500EE36D4 /* ArcTouchChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E5467C23A91CD500EE36D4 /* ArcTouchChallengeTests.swift */; };
@@ -26,6 +25,12 @@
 		D7E546AB23A94D0E00EE36D4 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546AA23A94D0E00EE36D4 /* Repository.swift */; };
 		D7E546AD23A9529E00EE36D4 /* String+Captalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546AC23A9529E00EE36D4 /* String+Captalization.swift */; };
 		D7E546AF23A952CE00EE36D4 /* UIColor+ArcTouchChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546AE23A952CE00EE36D4 /* UIColor+ArcTouchChallenge.swift */; };
+		D7E546B823A9586000EE36D4 /* QuizButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546B723A9586000EE36D4 /* QuizButton.swift */; };
+		D7E546BB23A95B9200EE36D4 /* QuizTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546BA23A95B9200EE36D4 /* QuizTextField.swift */; };
+		D7E546BD23A9647D00EE36D4 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546BC23A9647D00EE36D4 /* LoadingView.swift */; };
+		D7E546BF23A964A300EE36D4 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546BE23A964A300EE36D4 /* QuizViewController.swift */; };
+		D7E546C123A964B800EE36D4 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546C023A964B800EE36D4 /* QuizView.swift */; };
+		D7E546C523A97EA100EE36D4 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546C423A97EA100EE36D4 /* FooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +46,6 @@
 /* Begin PBXFileReference section */
 		D7E5466223A91CD500EE36D4 /* ArcTouchChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcTouchChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E5466523A91CD500EE36D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D7E5466923A91CD500EE36D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D7E5466E23A91CD500EE36D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7E5467123A91CD500EE36D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7E5467323A91CD500EE36D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +66,12 @@
 		D7E546AA23A94D0E00EE36D4 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		D7E546AC23A9529E00EE36D4 /* String+Captalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Captalization.swift"; sourceTree = "<group>"; };
 		D7E546AE23A952CE00EE36D4 /* UIColor+ArcTouchChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ArcTouchChallenge.swift"; sourceTree = "<group>"; };
+		D7E546B723A9586000EE36D4 /* QuizButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizButton.swift; sourceTree = "<group>"; };
+		D7E546BA23A95B9200EE36D4 /* QuizTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTextField.swift; sourceTree = "<group>"; };
+		D7E546BC23A9647D00EE36D4 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		D7E546BE23A964A300EE36D4 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		D7E546C023A964B800EE36D4 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		D7E546C423A97EA100EE36D4 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +120,6 @@
 				D7E546B023A9543700EE36D4 /* View */,
 				D7E5469C23A9486F00EE36D4 /* Resources */,
 				D7E5466523A91CD500EE36D4 /* AppDelegate.swift */,
-				D7E5466923A91CD500EE36D4 /* ViewController.swift */,
 				D7E5467323A91CD500EE36D4 /* Info.plist */,
 			);
 			path = ArcTouchChallenge;
@@ -227,8 +236,22 @@
 		D7E546B323A9549200EE36D4 /* QuizView */ = {
 			isa = PBXGroup;
 			children = (
+				D7E546B423A9553500EE36D4 /* Components */,
+				D7E546BE23A964A300EE36D4 /* QuizViewController.swift */,
+				D7E546C023A964B800EE36D4 /* QuizView.swift */,
 			);
 			path = QuizView;
+			sourceTree = "<group>";
+		};
+		D7E546B423A9553500EE36D4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D7E546B723A9586000EE36D4 /* QuizButton.swift */,
+				D7E546BA23A95B9200EE36D4 /* QuizTextField.swift */,
+				D7E546BC23A9647D00EE36D4 /* LoadingView.swift */,
+				D7E546C423A97EA100EE36D4 /* FooterView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,18 +358,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7E5469423A93F8F00EE36D4 /* QuizApiEndPoint.swift in Sources */,
+				D7E546BF23A964A300EE36D4 /* QuizViewController.swift in Sources */,
 				D7E5469023A9266700EE36D4 /* NetworkProtocol.swift in Sources */,
+				D7E546C523A97EA100EE36D4 /* FooterView.swift in Sources */,
 				D7E546A723A94C7900EE36D4 /* ViewCode.swift in Sources */,
 				D7E546A923A94CAE00EE36D4 /* Identifiable.swift in Sources */,
+				D7E546BB23A95B9200EE36D4 /* QuizTextField.swift in Sources */,
+				D7E546BD23A9647D00EE36D4 /* LoadingView.swift in Sources */,
 				D7E5469823A9420700EE36D4 /* Quiz.swift in Sources */,
 				D7E546AB23A94D0E00EE36D4 /* Repository.swift in Sources */,
-				D7E5466A23A91CD500EE36D4 /* ViewController.swift in Sources */,
 				D7E5468F23A9266700EE36D4 /* Request.swift in Sources */,
+				D7E546C123A964B800EE36D4 /* QuizView.swift in Sources */,
 				D7E546AF23A952CE00EE36D4 /* UIColor+ArcTouchChallenge.swift in Sources */,
 				D7E546A523A94AED00EE36D4 /* UIFont+ArcTouchChallenge.swift in Sources */,
 				D7E5469223A9266700EE36D4 /* NetworkEndPoint.swift in Sources */,
 				D7E546AD23A9529E00EE36D4 /* String+Captalization.swift in Sources */,
 				D7E5466623A91CD500EE36D4 /* AppDelegate.swift in Sources */,
+				D7E546B823A9586000EE36D4 /* QuizButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
