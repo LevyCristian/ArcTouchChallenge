@@ -21,7 +21,7 @@ class QuizTextField: UITextField {
     }
     
     func setupTextField() {
-        backgroundColor = UIColor.lightGray
+        backgroundColor = UIColor.backgroundColor
         font = UIFont.applyFont(ofSize: 17, weight: .regular)
         borderStyle = .none
         layer.masksToBounds = true
