@@ -60,15 +60,46 @@ class QuizView: UIView {
         return footer
     }()
     
+    private let keyManager = KeyBoardManager()
+
+    private var footerViewBottomConstraint: NSLayoutConstraint?
+    private var footerViewTopConstraint: NSLayoutConstraint?
+    private var keywordsTableViewBottomConstraint: NSLayoutConstraint?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupView()
+        keyboarHandle()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.setupView()
+        keyboarHandle()
 
+    }
+    
+    func keyboarHandle() {
+        keyManager.keyboardWillChangeFrame = { [unowned self] isHiding, newHeight, animationDuration, animationCurve in
+            
+            self.layoutIfNeeded()
+            
+            self.footerViewBottomConstraint?.constant = -newHeight
+            self.footerViewTopConstraint?.isActive = false
+            self.keywordsTableViewBottomConstraint?.isActive = false
+            
+            if isHiding {
+                self.footerViewTopConstraint = self.footerView.topAnchor.constraint(equalTo: self.keywordsTableView.topAnchor)
+                self.keywordsTableViewBottomConstraint = self.footerViewTopConstraint
+            } else {
+                self.footerViewTopConstraint = nil
+                self.keywordsTableViewBottomConstraint = self.keywordsTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            }
+            
+            UIView.animate(withDuration: animationDuration, delay: 0, options: animationCurve, animations: {
+                self.layoutIfNeeded()
+            })
+        }
     }
 }
 
@@ -106,16 +137,20 @@ extension QuizView : ViewCode {
             keywordsTableView.topAnchor.constraint(equalTo: quizTextField.bottomAnchor, constant: 16),
             keywordsTableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             keywordsTableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            keywordsTableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -135)
-            
         ])
         
         NSLayoutConstraint.activate([
-            footerView.topAnchor.constraint(equalTo: keywordsTableView.bottomAnchor),
             footerView.leadingAnchor.constraint(equalTo: leadingAnchor),
             footerView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            footerView.heightAnchor.constraint(equalToConstant: 135)
         ])
+        
+        footerViewBottomConstraint = footerView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        footerViewBottomConstraint?.isActive = true
+        
+        footerViewTopConstraint = footerView.topAnchor.constraint(equalTo: keywordsTableView.bottomAnchor)
+        footerViewTopConstraint?.isActive = true
+        
+        keywordsTableViewBottomConstraint = footerViewTopConstraint
     }
     
     func setupAdditionalConfigurantion() {

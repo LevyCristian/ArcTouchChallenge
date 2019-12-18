@@ -12,7 +12,7 @@ class FooterView: UIView {
 
     lazy var counterLabel: UILabel = {
         let label = UILabel()
-        label.text = "0/50"
+        label.text = "00/50"
         label.font = UIFont.applyFont(ofSize: 34, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -81,7 +81,8 @@ extension FooterView: ViewCode {
             quizButton.topAnchor.constraint(equalTo: timerLabel.bottomAnchor, constant: 16),
             quizButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             quizButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            quizButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
+            quizButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
+            quizButton.heightAnchor.constraint(equalToConstant: 44)
 
         ])
     }

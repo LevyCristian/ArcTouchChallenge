@@ -31,6 +31,7 @@
 		D7E546BF23A964A300EE36D4 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546BE23A964A300EE36D4 /* QuizViewController.swift */; };
 		D7E546C123A964B800EE36D4 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546C023A964B800EE36D4 /* QuizView.swift */; };
 		D7E546C523A97EA100EE36D4 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546C423A97EA100EE36D4 /* FooterView.swift */; };
+		D7E546C723AA4D8F00EE36D4 /* KeyBoardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546C623AA4D8F00EE36D4 /* KeyBoardManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		D7E546BE23A964A300EE36D4 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		D7E546C023A964B800EE36D4 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		D7E546C423A97EA100EE36D4 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		D7E546C623AA4D8F00EE36D4 /* KeyBoardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeyBoardManager.swift; path = ../../../../../Documents/KeyBoardManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 			children = (
 				D7E5469B23A9482A00EE36D4 /* Extensions */,
 				D7E5469A23A9481E00EE36D4 /* Protocols */,
+				D7E546C623AA4D8F00EE36D4 /* KeyBoardManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				D7E546BF23A964A300EE36D4 /* QuizViewController.swift in Sources */,
 				D7E5469023A9266700EE36D4 /* NetworkProtocol.swift in Sources */,
 				D7E546C523A97EA100EE36D4 /* FooterView.swift in Sources */,
+				D7E546C723AA4D8F00EE36D4 /* KeyBoardManager.swift in Sources */,
 				D7E546A723A94C7900EE36D4 /* ViewCode.swift in Sources */,
 				D7E546A923A94CAE00EE36D4 /* Identifiable.swift in Sources */,
 				D7E546BB23A95B9200EE36D4 /* QuizTextField.swift in Sources */,
