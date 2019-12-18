@@ -21,7 +21,7 @@ class Request<T: EndPointType>: NetworkProtocol {
         self.task = session.dataTask(with: request, completionHandler: { (data, _, error) in
             guard let responseData = data, error == nil else {
                 print("Request Error:", error!.localizedDescription)
-                return DispatchQueue.main.async {completion(.failure(Errors.failRequest))}
+                return DispatchQueue.main.async {completion(.failure(Errors.noInternet))}
             }
             
             do {
@@ -48,11 +48,13 @@ class Request<T: EndPointType>: NetworkProtocol {
 enum Errors: Error {
     case invalidURL
     case failRequest
+    case noInternet
     
     var localizedDescription: String {
         switch self {
         case .invalidURL: return "Invalid URL"
         case .failRequest: return "Applicantion cannot request external data"
+        case .noInternet: return "The Internet connection appears to be offline"
             
         }
     }

@@ -11,13 +11,13 @@ import UIKit
 class QuizView: UIView {
     
     var isLoading: Bool = false {
-        didSet(newValue) {
+        willSet(newValue) {
             if newValue {
                 loadingView.isHidden = false
                 loadingView.activyIndicator.startAnimating()
             } else {
                 loadingView.isHidden = true
-                loadingView.activyIndicator.startAnimating()
+                loadingView.activyIndicator.stopAnimating()
             }
         }
     }
@@ -105,21 +105,14 @@ class QuizView: UIView {
 
 extension QuizView : ViewCode {
     func buildViewHierarchy() {
-        addSubview(loadingView)
         addSubview(titleLabel)
         addSubview(quizTextField)
         addSubview(keywordsTableView)
         addSubview(footerView)
+        addSubview(loadingView)
     }
     
     func setupConstraints() {
-        NSLayoutConstraint.activate([
-            loadingView.topAnchor.constraint(equalTo: topAnchor),
-            loadingView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            loadingView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            loadingView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
-        
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 44),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
@@ -151,6 +144,13 @@ extension QuizView : ViewCode {
         footerViewTopConstraint?.isActive = true
         
         keywordsTableViewBottomConstraint = footerViewTopConstraint
+        
+        NSLayoutConstraint.activate([
+            loadingView.topAnchor.constraint(equalTo: topAnchor),
+            loadingView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            loadingView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            loadingView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
     }
     
     func setupAdditionalConfigurantion() {

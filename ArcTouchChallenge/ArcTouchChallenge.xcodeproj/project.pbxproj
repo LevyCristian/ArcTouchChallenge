@@ -32,6 +32,8 @@
 		D7E546C123A964B800EE36D4 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546C023A964B800EE36D4 /* QuizView.swift */; };
 		D7E546C523A97EA100EE36D4 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546C423A97EA100EE36D4 /* FooterView.swift */; };
 		D7E546C723AA4D8F00EE36D4 /* KeyBoardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546C623AA4D8F00EE36D4 /* KeyBoardManager.swift */; };
+		D7E546CD23AA6E5400EE36D4 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546CC23AA6E5400EE36D4 /* QuizViewModel.swift */; };
+		D7E546CF23AA753B00EE36D4 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546CE23AA753B00EE36D4 /* UIViewController+Alerts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		D7E546C023A964B800EE36D4 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		D7E546C423A97EA100EE36D4 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		D7E546C623AA4D8F00EE36D4 /* KeyBoardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeyBoardManager.swift; path = ../../../../../Documents/KeyBoardManager.swift; sourceTree = "<group>"; };
+		D7E546CC23AA6E5400EE36D4 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		D7E546CE23AA753B00EE36D4 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +201,7 @@
 				D7E546A423A94AED00EE36D4 /* UIFont+ArcTouchChallenge.swift */,
 				D7E546AC23A9529E00EE36D4 /* String+Captalization.swift */,
 				D7E546AE23A952CE00EE36D4 /* UIColor+ArcTouchChallenge.swift */,
+				D7E546CE23AA753B00EE36D4 /* UIViewController+Alerts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 		D7E546B223A9544700EE36D4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D7E546CC23AA6E5400EE36D4 /* QuizViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -363,6 +369,7 @@
 				D7E5469423A93F8F00EE36D4 /* QuizApiEndPoint.swift in Sources */,
 				D7E546BF23A964A300EE36D4 /* QuizViewController.swift in Sources */,
 				D7E5469023A9266700EE36D4 /* NetworkProtocol.swift in Sources */,
+				D7E546CD23AA6E5400EE36D4 /* QuizViewModel.swift in Sources */,
 				D7E546C523A97EA100EE36D4 /* FooterView.swift in Sources */,
 				D7E546C723AA4D8F00EE36D4 /* KeyBoardManager.swift in Sources */,
 				D7E546A723A94C7900EE36D4 /* ViewCode.swift in Sources */,
@@ -378,6 +385,7 @@
 				D7E5469223A9266700EE36D4 /* NetworkEndPoint.swift in Sources */,
 				D7E546AD23A9529E00EE36D4 /* String+Captalization.swift in Sources */,
 				D7E5466623A91CD500EE36D4 /* AppDelegate.swift in Sources */,
+				D7E546CF23AA753B00EE36D4 /* UIViewController+Alerts.swift in Sources */,
 				D7E546B823A9586000EE36D4 /* QuizButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

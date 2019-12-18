@@ -12,7 +12,7 @@ protocol ArcRemoteData {
     static func getQuiz(completion: @escaping (Result<Quiz, Errors>) -> Void)
 }
 
-public struct MovieRepository: ArcRemoteData {
+public struct QuizRepository: ArcRemoteData {
 
     private init() {}
     
