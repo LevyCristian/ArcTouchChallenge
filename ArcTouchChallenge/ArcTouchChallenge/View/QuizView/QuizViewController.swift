@@ -24,6 +24,9 @@ class QuizViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        quizView.footerView.quizButton.addTarget(viewModel, action: #selector(viewModel.didTapQuizButton(_:)), for: .touchUpInside)
+        
         viewModel.isLoading = { [weak self] loading in
             self?.quizView.isLoading = loading
         }
@@ -33,6 +36,17 @@ class QuizViewController: UIViewController {
                 self?.viewModel.loadQuiz()
             })
         }
+        
+        viewModel.updateTitleWithQuestion = { [weak self] question in
+            self?.quizView.titleLabel.text = question
+        }
+        
+        //Timer Bidings
+        viewModel.updateUIWithCurrentTimer = { [weak self] timer in
+            self?.quizView.footerView.timerLabel.text = timer
+            self?.quizView.footerView.quizButton.title = self?.viewModel.buttonTitle
+        }
+        
     }
 
 }

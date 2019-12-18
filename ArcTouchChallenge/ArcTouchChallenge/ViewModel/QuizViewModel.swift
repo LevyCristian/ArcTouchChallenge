@@ -6,7 +6,7 @@
 //  Copyright © 2019 Levy Cristian. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class QuizViewModel {
     
@@ -14,16 +14,25 @@ class QuizViewModel {
     typealias BooleanClosure = ((Bool) -> Void)
     typealias StringClosure = ((String) -> Void)
     typealias ErrorClousure = ((Errors) -> Void)
+    typealias CurrentTimeClosure = ((String) -> Void)
     
     // MARK: - Binding closures
     var isLoading: BooleanClosure?
     var errorLoadingData: ErrorClousure?
     var updateTitleWithQuestion: StringClosure?
     
-    private var answers: [String]
+    // MARK: - UI Bindings
+    var updateUIWithCurrentTimer: CurrentTimeClosure?
     
+    // MARK: - Variables
+    private var answers: [String]
+    private var quizTimer: TimerManager = TimerManager()
+    
+    public var buttonTitle: String? {
+        return quizTimer.timer == nil ? "Start" : "Reset"
+    }
     private var question: String  {
-        didSet(newValue) {
+        willSet(newValue) {
             updateTitleWithQuestion?(newValue)
         }
     }
@@ -31,6 +40,7 @@ class QuizViewModel {
     init(answers: [String] = [String]()) {
         self.answers = answers
         self.question = ""
+        setupTimer()
     }
     
     func loadQuiz() {
@@ -41,12 +51,26 @@ class QuizViewModel {
                 self?.isLoading?(false)
                 self?.answers = quiz.answer
                 self?.question = quiz.question
+                self?.updateUIWithCurrentTimer?("5:00")
             case .failure(let erro):
                 self?.isLoading?(false)
                 self?.errorLoadingData?(erro)
             }
         }
-        
     }
     
+    private func setupTimer() {
+        quizTimer.updatedTimerValue = { [unowned self] timerFormated in
+            self.updateUIWithCurrentTimer?(timerFormated)
+        }
+    }
+    
+    @objc func didTapQuizButton(_ button: UIButton) {
+        if quizTimer.timer == nil {
+            quizTimer.startTimer()
+        } else {
+            quizTimer.invalidateTimer()
+            quizTimer.resetCounterAndTimer()
+        }
+    }
 }

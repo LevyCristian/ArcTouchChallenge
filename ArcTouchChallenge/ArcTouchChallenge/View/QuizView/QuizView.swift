@@ -30,7 +30,6 @@ class QuizView: UIView {
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "What are all the java keywords?"
         label.font = UIFont.applyFont(ofSize: 34, weight: .bold)
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
