@@ -26,8 +26,6 @@ class TimerManager {
     let totalTimerSeconds: Int = 5 * 60
     var secondsLeftTimer: Int = 5 * 60
     
-    
-    
     func startTimer() {
        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [unowned self] (timer) in
             self.secondsLeftTimer -= 1

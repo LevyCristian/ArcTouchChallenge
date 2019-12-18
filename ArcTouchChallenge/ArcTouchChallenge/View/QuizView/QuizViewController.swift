@@ -14,6 +14,7 @@ class QuizViewController: UIViewController {
     
     lazy var quizView: QuizView = {
         let view = QuizView()
+        view.keywordsTableView.dataSource = self
         return view
     }()
 
@@ -26,6 +27,8 @@ class QuizViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         quizView.footerView.quizButton.addTarget(viewModel, action: #selector(viewModel.didTapQuizButton), for: .touchUpInside)
+        
+        quizView.quizTextField.addTarget(viewModel, action: #selector(viewModel.textFieldDidChange(_:)), for: .editingChanged)
         
         viewModel.isLoading = { [weak self] loading in
             self?.quizView.isLoading = loading
@@ -58,9 +61,22 @@ class QuizViewController: UIViewController {
                         self?.viewModel.didTapQuizButton()
                 })
             }
-            
         }
-        
     }
+}
 
+extension QuizViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.viewModel.numberOfRows
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.reuseIdentifier, for: indexPath)
+        guard let cellViewModel = viewModel.getCellViewModel(for: indexPath) else { return UITableViewCell() }
+        cell.textLabel?.text = cellViewModel.keywordText
+        return cell
+    }
+    
+    
 }

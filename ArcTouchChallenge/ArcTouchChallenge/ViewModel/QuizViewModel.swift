@@ -24,20 +24,31 @@ class QuizViewModel {
     var didFinishQuiz: BooleanClosure?
     
     // MARK: - Variables
-    private var answers: [String]
+    private var numberOfHits: Int = 0
+    private var numberOfAnswers: Int = 0
+    private var cellViewModels: [KeywordCellViewModel] = []
+    
     private var quizTimer: TimerManager = TimerManager()
     
-    public var buttonTitle: String? {
+    var buttonTitle: String? {
         return quizTimer.timer == nil ? "Start" : "Reset"
     }
+    
+    var numberOfRows: Int {
+        return cellViewModels.count
+    }
+    
+//    var countLabel: String? {
+//        return quizTimer.timer == nil ? "Start" : "Reset"
+//    } fazer a label de hits
+//
     private var question: String  {
         willSet(newValue) {
             updateTitleWithQuestion?(newValue)
         }
     }
     
-    init(answers: [String] = [String]()) {
-        self.answers = answers
+    init() {
         self.question = ""
         setupTimer()
     }
@@ -48,9 +59,9 @@ class QuizViewModel {
             switch result {
             case .success(let quiz):
                 self?.isLoading?(false)
-                self?.answers = quiz.answer
                 self?.question = quiz.question
                 self?.updateUIWithCurrentTimer?("5:00")
+                
             case .failure(let erro):
                 self?.isLoading?(false)
                 self?.errorLoadingData?(erro)
@@ -76,5 +87,15 @@ class QuizViewModel {
             quizTimer.invalidateTimer()
             quizTimer.resetCounterAndTimer()
         }
+    }
+    
+    @objc func textFieldDidChange(_ textField : UITextField) {
+        if let text = textField.text, quizTimer.timer != nil {
+            
+        }
+    }
+    
+    func getCellViewModel(for indexPath: IndexPath) -> KeywordCellViewModel? {
+        return cellViewModels[indexPath.row]
     }
 }
