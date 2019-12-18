@@ -20,9 +20,8 @@ class QuizViewModel {
     var isLoading: BooleanClosure?
     var errorLoadingData: ErrorClousure?
     var updateTitleWithQuestion: StringClosure?
-    
-    // MARK: - UI Bindings
     var updateUIWithCurrentTimer: CurrentTimeClosure?
+    var didFinishQuiz: BooleanClosure?
     
     // MARK: - Variables
     private var answers: [String]
@@ -63,9 +62,14 @@ class QuizViewModel {
         quizTimer.updatedTimerValue = { [unowned self] timerFormated in
             self.updateUIWithCurrentTimer?(timerFormated)
         }
+        
+        quizTimer.didFinishQuiz = { [weak self] result in
+            self?.didTapQuizButton()
+            self?.didFinishQuiz?(result)
+        }
     }
     
-    @objc func didTapQuizButton(_ button: UIButton) {
+    @objc func didTapQuizButton() {
         if quizTimer.timer == nil {
             quizTimer.startTimer()
         } else {

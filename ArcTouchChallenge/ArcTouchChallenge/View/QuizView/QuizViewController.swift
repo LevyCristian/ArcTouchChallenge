@@ -25,7 +25,7 @@ class QuizViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        quizView.footerView.quizButton.addTarget(viewModel, action: #selector(viewModel.didTapQuizButton(_:)), for: .touchUpInside)
+        quizView.footerView.quizButton.addTarget(viewModel, action: #selector(viewModel.didTapQuizButton), for: .touchUpInside)
         
         viewModel.isLoading = { [weak self] loading in
             self?.quizView.isLoading = loading
@@ -45,6 +45,20 @@ class QuizViewController: UIViewController {
         viewModel.updateUIWithCurrentTimer = { [weak self] timer in
             self?.quizView.footerView.timerLabel.text = timer
             self?.quizView.footerView.quizButton.title = self?.viewModel.buttonTitle
+        }
+        
+        viewModel.didFinishQuiz = { [weak self] isWinner in
+            
+            if isWinner {
+                
+            } else {
+                self?.showAlert("Time finished",
+                                message: "Sorry, time is up! You got \(1) out of \(10) answers.", button: "Try Again", handler:
+                    { [weak self] (_) in
+                        self?.viewModel.didTapQuizButton()
+                })
+            }
+            
         }
         
     }
