@@ -88,8 +88,10 @@ class QuizView: UIView {
             self.keywordsTableViewBottomConstraint?.isActive = false
             
             if isHiding {
-                self.footerViewTopConstraint = self.footerView.topAnchor.constraint(equalTo: self.keywordsTableView.topAnchor)
+                self.footerViewTopConstraint = self.footerView.topAnchor.constraint(equalTo: self.keywordsTableView.bottomAnchor)
                 self.keywordsTableViewBottomConstraint = self.footerViewTopConstraint
+                self.footerViewTopConstraint?.isActive = true
+                self.keywordsTableViewBottomConstraint?.isActive = true
             } else {
                 self.footerViewTopConstraint = nil
                 self.keywordsTableViewBottomConstraint = self.keywordsTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
