@@ -104,7 +104,7 @@ class QuizViewModel {
             quizTimer.resetCounterAndTimer()
             
             numberOfHits = 0
-            hits = []
+            hits.removeAll()
             updatedUIWitCurrenthCounterValue?(countLabel)
         }
     }
