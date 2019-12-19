@@ -93,6 +93,7 @@ class QuizView: UIView {
             } else {
                 self.footerViewTopConstraint = nil
                 self.keywordsTableViewBottomConstraint = self.keywordsTableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+                self.keywordsTableViewBottomConstraint?.isActive = true
             }
             
             UIView.animate(withDuration: animationDuration, delay: 0, options: animationCurve, animations: {
