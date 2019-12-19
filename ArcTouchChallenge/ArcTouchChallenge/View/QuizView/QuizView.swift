@@ -101,6 +101,18 @@ class QuizView: UIView {
             })
         }
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        guard let firstTouch = touches.first else {
+            return
+        }
+        
+        if firstTouch.view != self.quizTextField {
+            self.quizTextField.endEditing(true)
+        }
+    }
 }
 
 extension QuizView : ViewCode {
