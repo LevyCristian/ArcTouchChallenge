@@ -102,6 +102,10 @@ class QuizViewModel {
         } else {
             quizTimer.invalidateTimer()
             quizTimer.resetCounterAndTimer()
+            
+            numberOfHits = 0
+            hits = []
+            updatedUIWitCurrenthCounterValue?(countLabel)
         }
     }
     
