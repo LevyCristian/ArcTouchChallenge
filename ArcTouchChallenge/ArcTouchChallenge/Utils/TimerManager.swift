@@ -17,14 +17,13 @@ class TimerManager {
     var didFinishQuiz: BooleanClousure?
     
     var timer: Timer? = nil
+    var secondsLeftTimer: Int = 5 * 60
+
     private var timerStringFormated: String {
         let minutes = Int(secondsLeftTimer) / 60 % 60
         let seconds = Int(secondsLeftTimer) % 60
         return String(format:"%02i:%02i", minutes, seconds)
     }
-    
-    let totalTimerSeconds: Int = 5 * 60
-    var secondsLeftTimer: Int = 5 * 60
     
     func startTimer() {
        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [unowned self] (timer) in
@@ -32,7 +31,8 @@ class TimerManager {
             self.updatedTimerValue?(self.timerStringFormated)
            
            if self.secondsLeftTimer <= 0 {
-               self.didFinishQuiz?(false)
+                self.timer?.invalidate()
+                self.didFinishQuiz?(false)
            }
        }
     }
