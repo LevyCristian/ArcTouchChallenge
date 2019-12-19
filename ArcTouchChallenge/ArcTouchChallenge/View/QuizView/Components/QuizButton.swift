@@ -16,6 +16,7 @@ class QuizButton: UIButton {
         }
     }
     
+    // MARK: - Initializer & functions
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupButton()

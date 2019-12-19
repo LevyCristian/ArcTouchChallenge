@@ -7,15 +7,20 @@
 //
 
 import UIKit
-
+/**
+    A Time manager to make the quiz timer more easy to use
+*/
 class TimerManager {
     
+    // MARK: - Typealias
     typealias UpdateTimerClousure = ((String) -> Void)
     typealias BooleanClousure = ((Bool) -> Void)
     
+    // MARK: - Binding closures
     var updatedTimerValue: UpdateTimerClousure?
     var didFinishQuiz: BooleanClousure?
     
+    // MARK: - Variables
     var timer: Timer? = nil
     var secondsLeftTimer: Int = 5 * 60
 

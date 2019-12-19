@@ -23,9 +23,8 @@ class QuizViewModel {
     var updatedUIWitCurrenthCounterValue: StringClosure?
     var didFinishQuiz: BooleanClosure?
     
-    // MARK: - Variables
+    // MARK: - Control Variables
     private var quizResponse: Quiz?
-    private var cellViewModels: [KeywordCellViewModel] = []
     private var quizTimer: TimerManager = TimerManager()
     var numberOfHits: Int = 0
     
@@ -61,6 +60,10 @@ class QuizViewModel {
         }
     }
     
+    // MARK: - ViewModel
+    private var cellViewModels: [KeywordCellViewModel] = []
+    
+    // MARK: - Initializer & functions
     init() {
         self.question = ""
         self.hits = []

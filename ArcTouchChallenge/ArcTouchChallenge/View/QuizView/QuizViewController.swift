@@ -10,14 +10,17 @@ import UIKit
 
 class QuizViewController: UIViewController {
     
+    // MARK: - ViewModel
     let viewModel: QuizViewModel = QuizViewModel()
     
+    // MARK: - UI Variable
     lazy var quizView: QuizView = {
         let view = QuizView()
         view.keywordsTableView.dataSource = self
         return view
     }()
-
+    
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = quizView
@@ -25,7 +28,7 @@ class QuizViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        // MARK: - ViewModel Binding
         quizView.footerView.quizButton.addTarget(viewModel, action: #selector(viewModel.didTapQuizButton), for: .touchUpInside)
         
         quizView.quizTextField.addTarget(viewModel, action: #selector(viewModel.textFieldDidChange(_:)), for: .editingChanged)

@@ -9,7 +9,8 @@
 import UIKit
 
 class LoadingView: UIView {
-
+    
+    // MARK: - UI Variables
     private lazy var containerView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
@@ -36,6 +37,7 @@ class LoadingView: UIView {
         return label
     }()
     
+    // MARK: - Initializer & functions
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupView()

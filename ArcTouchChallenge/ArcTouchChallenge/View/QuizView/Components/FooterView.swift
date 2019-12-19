@@ -10,6 +10,7 @@ import UIKit
 
 class FooterView: UIView {
 
+    // MARK: - UI Variables
     lazy var counterLabel: UILabel = {
         let label = UILabel()
         label.text = "00/50"
@@ -39,6 +40,7 @@ class FooterView: UIView {
         return line
     }()
     
+    // MARK: - Initializer & functions
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupView()

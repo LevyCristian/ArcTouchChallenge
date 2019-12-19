@@ -7,11 +7,17 @@
 //
 
 import Foundation
-
+/**
+    Class Reponsible for managment of API request layer
+*/
 class Request<T: EndPointType>: NetworkProtocol {
     
     private var task: URLSessionTask?
-    
+    /**
+        Method resposible for json decoder fom API
+       - parameter route: Api route to EndPoint
+       - parameter completion: A generic completion of `Result<T, Errors>` that sould be implemented for api result
+       */
     func run<U: Decodable>(_ endPoint: T, completion: @escaping (Result<U, Errors>) -> Void) {
         let session = URLSession.shared
         
@@ -44,7 +50,9 @@ class Request<T: EndPointType>: NetworkProtocol {
     }
     
 }
-
+/**
+   Enum of possible API Erros
+*/
 enum Errors: Error {
     case invalidURL
     case failRequest

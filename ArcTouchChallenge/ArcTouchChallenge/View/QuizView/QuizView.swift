@@ -10,6 +10,12 @@ import UIKit
 
 class QuizView: UIView {
     
+    // MARK: - Control Variable
+    private let keyManager = KeyBoardManager()
+    private var footerViewBottomConstraint: NSLayoutConstraint?
+    private var footerViewTopConstraint: NSLayoutConstraint?
+    private var keywordsTableViewBottomConstraint: NSLayoutConstraint?
+    
     var isLoading: Bool = false {
         willSet(newValue) {
             if newValue {
@@ -22,6 +28,8 @@ class QuizView: UIView {
         }
     }
     
+    
+    // MARK: - UI VAriable
     private lazy var loadingView: LoadingView = {
         let loadingView = LoadingView()
         loadingView.translatesAutoresizingMaskIntoConstraints = false
@@ -59,12 +67,7 @@ class QuizView: UIView {
         return footer
     }()
     
-    private let keyManager = KeyBoardManager()
-
-    private var footerViewBottomConstraint: NSLayoutConstraint?
-    private var footerViewTopConstraint: NSLayoutConstraint?
-    private var keywordsTableViewBottomConstraint: NSLayoutConstraint?
-    
+    // MARK: - Initializatores
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupView()
@@ -78,6 +81,7 @@ class QuizView: UIView {
 
     }
     
+    // MARK: - Functions
     func keyboarHandle() {
         keyManager.keyboardWillChangeFrame = { [unowned self] isHiding, newHeight, animationDuration, animationCurve in
             

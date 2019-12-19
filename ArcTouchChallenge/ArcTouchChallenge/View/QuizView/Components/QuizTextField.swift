@@ -9,7 +9,8 @@
 import UIKit
 
 class QuizTextField: UITextField {
-        
+    
+    // MARK: - Initializer & functions
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupTextField()
