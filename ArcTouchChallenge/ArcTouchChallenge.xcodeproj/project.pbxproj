@@ -36,6 +36,8 @@
 		D7E546CF23AA753B00EE36D4 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546CE23AA753B00EE36D4 /* UIViewController+Alerts.swift */; };
 		D7E546D623AABBD200EE36D4 /* KeywordCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546D523AABBD200EE36D4 /* KeywordCellViewModel.swift */; };
 		D7E546D823AACB3300EE36D4 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546D723AACB3300EE36D4 /* TimerManager.swift */; };
+		D7E546DB23AB95AB00EE36D4 /* EndPointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546DA23AB95AB00EE36D4 /* EndPointTest.swift */; };
+		D7E546DD23AB986500EE36D4 /* RequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E546DC23AB986500EE36D4 /* RequestTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		D7E546CE23AA753B00EE36D4 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		D7E546D523AABBD200EE36D4 /* KeywordCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordCellViewModel.swift; sourceTree = "<group>"; };
 		D7E546D723AACB3300EE36D4 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		D7E546DA23AB95AB00EE36D4 /* EndPointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointTest.swift; sourceTree = "<group>"; };
+		D7E546DC23AB986500EE36D4 /* RequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 		D7E5467B23A91CD500EE36D4 /* ArcTouchChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				D7E546D923AB955800EE36D4 /* Service */,
 				D7E5467C23A91CD500EE36D4 /* ArcTouchChallengeTests.swift */,
 				D7E5467E23A91CD500EE36D4 /* Info.plist */,
 			);
@@ -267,6 +272,15 @@
 				D7E546C423A97EA100EE36D4 /* FooterView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		D7E546D923AB955800EE36D4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D7E546DA23AB95AB00EE36D4 /* EndPointTest.swift */,
+				D7E546DC23AB986500EE36D4 /* RequestTest.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +416,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E546DD23AB986500EE36D4 /* RequestTest.swift in Sources */,
+				D7E546DB23AB95AB00EE36D4 /* EndPointTest.swift in Sources */,
 				D7E5467D23A91CD500EE36D4 /* ArcTouchChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

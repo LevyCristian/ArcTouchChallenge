@@ -105,6 +105,7 @@ class QuizViewModel {
             
             numberOfHits = 0
             hits.removeAll()
+             
             updatedUIWitCurrenthCounterValue?(countLabel)
         }
     }
