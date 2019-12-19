@@ -56,13 +56,18 @@ class QuizViewController: UIViewController {
             self?.quizView.keywordsTableView.reloadData()
         }
         
-        viewModel.didFinishQuiz = { [weak self] isWinner in
-            
+        viewModel.didFinishQuiz = { [unowned self] isWinner in
+            self.quizView.quizTextField.endEditing(true)
+
             if isWinner {
-                
+                self.showAlert("Congratulations",
+                               message: "Good job! You found all the answers on time. Keep up with the great work.",
+                               button: "Play Again") { [weak self] (_) in
+                                self?.viewModel.didTapQuizButton()
+                }
             } else {
-                self?.showAlert("Time finished",
-                                message: "Sorry, time is up! You got \(1) out of \(10) answers.", button: "Try Again", handler:
+                self.showAlert("Time finished",
+                                message: "Sorry, time is up! You got \(self.viewModel.numberOfHits) out of \(self.viewModel.numberOfAnswers) answers.", button: "Try Again", handler:
                     { [weak self] (_) in
                         self?.viewModel.didTapQuizButton()
                 })
@@ -83,6 +88,4 @@ extension QuizViewController: UITableViewDataSource {
         cell.textLabel?.text = cellViewModel.keywordText
         return cell
     }
-    
-    
 }

@@ -25,13 +25,9 @@ class QuizViewModel {
     
     // MARK: - Variables
     private var quizResponse: Quiz?
-    private var numberOfHits: Int = 0
     private var cellViewModels: [KeywordCellViewModel] = []
     private var quizTimer: TimerManager = TimerManager()
-
-    private var numberOfAnswers: Int  {
-        return quizResponse?.answer.count ?? 0
-    }
+    var numberOfHits: Int = 0
     
     private var hits: [String] {
         didSet(newValue) {
@@ -44,6 +40,10 @@ class QuizViewModel {
     
     var buttonTitle: String? {
         return quizTimer.timer == nil ? "Start" : "Reset"
+    }
+    
+    var numberOfAnswers: Int  {
+        return quizResponse?.answer.count ?? 0
     }
     
     var numberOfRows: Int {
@@ -91,7 +91,6 @@ class QuizViewModel {
         }
         
         quizTimer.didFinishQuiz = { [weak self] result in
-            self?.didTapQuizButton()
             self?.didFinishQuiz?(result)
         }
     }
@@ -99,6 +98,7 @@ class QuizViewModel {
     @objc func didTapQuizButton() {
         if quizTimer.timer == nil {
             quizTimer.startTimer()
+            
         } else {
             quizTimer.invalidateTimer()
             quizTimer.resetCounterAndTimer()
@@ -127,6 +127,7 @@ class QuizViewModel {
             self.updatedUIWitCurrenthCounterValue?(self.countLabel)
 
             if numberOfHits == numberOfAnswers {
+                self.quizTimer.timer?.invalidate()
                 didFinishQuiz?(true)
             }
         }
